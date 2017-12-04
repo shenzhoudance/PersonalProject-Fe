@@ -1,0 +1,328 @@
+body {
+    background-color: #edf0f1;
+}
+
+.class-div-quadrant {
+    width: 50%;
+    border: 1px solid grey;
+    height: 50%;
+    overflow: hidden;
+    float: left;
+}
+
+.class-div-header {
+    width: 100%;
+    height: 80px;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    padding: 15px;
+    box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#id-div-header1 {
+    background-color: #b92525;
+}
+
+#id-div-header2 {
+    background-color: #335977;
+}
+
+#id-div-header3 {
+    background-color: #de9b37;
+}
+
+#id-div-header4 {
+    background-color: #a7d078;
+}
+
+.class-div-header input {
+    width: 100%;
+    height: 50px;
+    float: left;
+    color: #fff;
+    padding: 0px 60px 0 18px;
+    font-size: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border: 0px;
+    box-shadow: none;
+    outline: none;
+}
+
+.class-div-header input::-webkit-input-placeholder { /* WebKit browsers */
+    color: rgba(255, 255, 255, 0.75);
+}
+.class-div-header input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: rgba(255, 255, 255, 0.75);
+}
+.class-div-header input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: rgba(255, 255, 255, 0.75);
+}
+.class-div-header input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.class-div-header button {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 0px;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.class-div-header button svg {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -8px 0 0 -8px;
+}
+
+#id-div-header1 button svg .fill {
+    fill: #b92525;
+}
+
+#id-div-header2 button svg .fill {
+    fill: #335977;
+}
+
+#id-div-header3 button svg .fill {
+    fill: #de9b37;
+}
+
+#id-div-header4 button svg .fill {
+    fill: #a7d078;
+}
+
+.class-div-container {
+    width: 100%;
+    float: left;
+    padding: 15px;
+}
+
+.class-ul-allTodo, .class-ul-doneTodo {
+    width: 100%;
+    float: left;
+}
+
+.noFill {
+    fill: none;
+}
+
+.class-ul-allTodo li, .class-ul-doneTodo li {
+    width: 100%;
+    float: left;
+    min-height: 50px;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: 500px;
+    color: #444;
+    line-height: 22px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.10);
+    margin-bottom: 10px;
+    position: relative;
+    padding: 14px 100px 14px 14px;
+    transition: opacity 0.3s;*/
+}
+
+.removeLi {
+    opacity: 0;
+}
+
+.class-ul-allTodo li:hover, .class-ul-doneTodo li:hover {
+    box-shadow: 0px 1px 4px rgba(44, 62, 80, 0.50);
+    border: 1px solid rgba(86, 170, 255, 0.50);
+}
+
+.class-ul-allTodo li:last-child, .class-ul-doneTodo li:last-child {
+    margin: 0;
+}
+
+.class-div-todoButtons {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.class-div-todoButtons button {
+    width: 50px;
+    height: 50px;
+    float: left;
+    background: none;
+    border: 0px;
+    box-shadow: none;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.class-div-todoButtons button:last-child::before {
+    content: "";
+    width: 1px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background-color: #edf0f1;
+}
+
+.class-div-todoButtons button svg {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -11px 0 0 -11px;
+}
+
+.class-div-todoButtons button svg .fill {
+    transition: fill 0.2s ease;
+}
+
+.class-button-completeTodo svg {
+    border-radius: 11px;
+    border: 1.5px solid #b92525;
+    transition: fill 0.2s ease;
+}
+
+/*颜色*/
+.class-button-removeTodo svg .fill {
+    fill: #c0cecb;
+}
+
+#id-div-quadrant-1-remove:hover svg .fill {
+    fill: #e85656;
+}
+
+#id-div-quadrant-2-remove:hover svg .fill {
+    fill: #5C7A92;
+}
+
+#id-div-quadrant-3-remove:hover svg .fill {
+    fill: #E5AF5F;
+}
+
+#id-div-quadrant-4-remove:hover svg .fill {
+    fill: #B9D993;
+}
+
+
+#id-div-quadrant-1-complete svg .fill {
+    fill: #b92525;
+}
+
+#id-div-quadrant-2-complete svg .fill {
+    fill: #335977;
+}
+
+#id-div-quadrant-3-complete svg .fill {
+    fill: #DE9B37;
+}
+
+#id-div-quadrant-4-complete svg .fill {
+    fill: #A7D078;
+}
+
+#id-div-quadrant-1-complete:hover svg .fill {
+    fill: #fff;
+}
+#id-div-quadrant-2-complete:hover svg .fill {
+    fill: #fff;
+}
+#id-div-quadrant-3-complete:hover svg .fill {
+    fill: #fff;
+}
+#id-div-quadrant-4-complete:hover svg .fill {
+    fill: #fff;
+}
+
+#id-div-quadrant-1-complete svg {
+    background-color: #fff;
+    border: 1px solid #b92525 ;
+}
+
+#id-div-quadrant-2-complete svg {
+    background-color: #fff;
+    border: 1px solid #335977;
+}
+
+#id-div-quadrant-3-complete svg {
+    background-color: #fff;
+    border: 1px solid #DE9B37 ;
+}
+
+#id-div-quadrant-4-complete svg {
+    background-color: #fff;
+    border: 1px solid #A7D078 ;
+}
+
+#id-div-quadrant-1-complete:hover svg {
+    background-color: #b92525;
+    border: 0px;
+}
+
+#id-div-quadrant-2-complete:hover svg {
+    background-color: #335977;
+    border: 0px;
+}
+
+#id-div-quadrant-3-complete:hover svg {
+    background-color: #DE9B37;
+    border: 0px;
+}
+
+#id-div-quadrant-4-complete:hover svg {
+    background-color: #A7D078;
+    border: 0px;
+}
+
+.class-ul-doneTodo {
+    position: relative;
+    padding: 60px 0 0 0;
+}
+
+.class-ul-doneTodo::before {
+    width: 150px;
+    height: 1px;
+    background-color: #d8e5e0;
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: 50%;
+    margin: 0 0 0 -75px;
+}
+
+#id-ul-doneTodo:empty:after {
+    content: "完成事项";
+}
+
+#id-ul-allTodo:empty:after {
+    content: "待做事项";
+    margin: 15px 0 0 0;
+}
+
+#id-ul-allTodo:after, #id-ul-doneTodo:after {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+}
