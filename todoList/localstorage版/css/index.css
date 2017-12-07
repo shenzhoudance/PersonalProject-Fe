@@ -2,6 +2,8 @@ body {
     background-color: #edf0f1;
 }
 
+/*输入事项框*/
+/*所有象限共有的样式用class,不同的用id*/
 .class-div-quadrant {
     width: 50%;
     border: 1px solid grey;
@@ -9,7 +11,6 @@ body {
     overflow: hidden;
     float: left;
 }
-
 .class-div-header {
     width: 100%;
     height: 80px;
@@ -23,19 +24,17 @@ body {
     border-bottom-right-radius: 10px;
 }
 
-#id-div-header1 {
+/*header背景颜色不同*/
+#id-div-header-1 {
     background-color: #b92525;
 }
-
-#id-div-header2 {
+#id-div-header-2 {
     background-color: #335977;
 }
-
-#id-div-header3 {
+#id-div-header-3 {
     background-color: #de9b37;
 }
-
-#id-div-header4 {
+#id-div-header-4 {
     background-color: #a7d078;
 }
 
@@ -56,6 +55,7 @@ body {
     outline: none;
 }
 
+/*添加事项的输入框默认文字颜色，考虑不同浏览器兼容性*/
 .class-div-header input::-webkit-input-placeholder { /* WebKit browsers */
     color: rgba(255, 255, 255, 0.75);
 }
@@ -69,6 +69,7 @@ body {
     color: rgba(255, 255, 255, 0.75);
 }
 
+/*添加button的样式设置*/
 .class-div-header button {
     width: 50px;
     height: 50px;
@@ -83,7 +84,7 @@ body {
     outline: none;
     cursor: pointer;
 }
-
+/*添加button的矢量图标样式设置*/
 .class-div-header button svg {
     width: 16px;
     height: 16px;
@@ -93,22 +94,22 @@ body {
     margin: -8px 0 0 -8px;
 }
 
-#id-div-header1 button svg .fill {
+/*不同象限的添加button的矢量图标填充颜色是不同的*/
+#id-div-header-1 button svg .fill {
     fill: #b92525;
 }
-
-#id-div-header2 button svg .fill {
+#id-div-header-2 button svg .fill {
     fill: #335977;
 }
-
-#id-div-header3 button svg .fill {
+#id-div-header-3 button svg .fill {
     fill: #de9b37;
 }
-
-#id-div-header4 button svg .fill {
+#id-div-header-4 button svg .fill {
     fill: #a7d078;
 }
 
+
+/*container*/
 .class-div-container {
     width: 100%;
     float: left;
@@ -120,8 +121,9 @@ body {
     float: left;
 }
 
-.noFill {
-    fill: none;
+.class-ul-doneTodo {
+    position: relative;
+    padding: 20px 0 0 0;
 }
 
 .class-ul-allTodo li, .class-ul-doneTodo li {
@@ -141,17 +143,9 @@ body {
     transition: opacity 0.3s;*/
 }
 
-.removeLi {
-    opacity: 0;
-}
-
 .class-ul-allTodo li:hover, .class-ul-doneTodo li:hover {
     box-shadow: 0px 1px 4px rgba(44, 62, 80, 0.50);
     border: 1px solid rgba(86, 170, 255, 0.50);
-}
-
-.class-ul-allTodo li:last-child, .class-ul-doneTodo li:last-child {
-    margin: 0;
 }
 
 .class-div-todoButtons {
@@ -174,14 +168,8 @@ body {
     cursor: pointer;
 }
 
-.class-div-todoButtons button:last-child::before {
-    content: "";
-    width: 1px;
-    height: 30px;
-    position: absolute;
-    top: 10px;
-    left: 0;
-    background-color: #edf0f1;
+.noFill {
+    fill: none;
 }
 
 .class-div-todoButtons button svg {
@@ -191,138 +179,110 @@ body {
     top: 50%;
     left: 50%;
     margin: -11px 0 0 -11px;
+    background: #fff;
+    border-radius: 11px;
+    transition: fill 0.2s ease;
 }
 
 .class-div-todoButtons button svg .fill {
     transition: fill 0.2s ease;
 }
 
-.class-button-completeTodo svg {
-    border-radius: 11px;
-    border: 1.5px solid #b92525;
-    transition: fill 0.2s ease;
-}
-
 /*颜色*/
-.class-button-removeTodo svg .fill {
+/*鼠标移出时删除标志为淡白色*/
+.class-svg-remove .fill {
     fill: #c0cecb;
 }
-
-#id-div-quadrant-1-remove:hover svg .fill {
+/*鼠标移入时删除标志变色*/
+.class-button-removeTodo-1:hover svg .fill {
     fill: #e85656;
 }
 
-#id-div-quadrant-2-remove:hover svg .fill {
+.class-button-removeTodo-2:hover svg .fill {
     fill: #5C7A92;
 }
 
-#id-div-quadrant-3-remove:hover svg .fill {
+.class-button-removeTodo-3:hover svg .fill {
     fill: #E5AF5F;
 }
 
-#id-div-quadrant-4-remove:hover svg .fill {
+.class-button-removeTodo-4:hover svg .fill {
     fill: #B9D993;
 }
 
+/*completeTodo的border颜色设置*/
+.class-button-completeTodo-1 svg {
+    border: 1.5px solid #b92525;
+}
 
-#id-div-quadrant-1-complete svg .fill {
+.class-button-completeTodo-2 svg {
+    border: 1.5px solid #335977;
+}
+
+.class-button-completeTodo-3 svg {
+    border: 1.5px solid #DE9B37;
+}
+
+.class-button-completeTodo-4 svg {
+    border: 1.5px solid #A7D078;
+}
+/*填充颜色*/
+.class-button-completeTodo-1 svg .fill {
     fill: #b92525;
 }
 
-#id-div-quadrant-2-complete svg .fill {
+.class-button-completeTodo-2 svg .fill {
     fill: #335977;
 }
 
-#id-div-quadrant-3-complete svg .fill {
+.class-button-completeTodo-3 svg .fill {
     fill: #DE9B37;
 }
 
-#id-div-quadrant-4-complete svg .fill {
+.class-button-completeTodo-4 svg .fill {
     fill: #A7D078;
 }
-
-#id-div-quadrant-1-complete:hover svg .fill {
-    fill: #fff;
-}
-#id-div-quadrant-2-complete:hover svg .fill {
-    fill: #fff;
-}
-#id-div-quadrant-3-complete:hover svg .fill {
-    fill: #fff;
-}
-#id-div-quadrant-4-complete:hover svg .fill {
+/*移入填充白色*/
+.class-svg-complete:hover .fill {
     fill: #fff;
 }
 
-#id-div-quadrant-1-complete svg {
-    background-color: #fff;
-    border: 1px solid #b92525 ;
-}
 
-#id-div-quadrant-2-complete svg {
-    background-color: #fff;
-    border: 1px solid #335977;
-}
-
-#id-div-quadrant-3-complete svg {
-    background-color: #fff;
-    border: 1px solid #DE9B37 ;
-}
-
-#id-div-quadrant-4-complete svg {
-    background-color: #fff;
-    border: 1px solid #A7D078 ;
-}
-
-#id-div-quadrant-1-complete:hover svg {
+.class-button-completeTodo-1 svg:hover {
     background-color: #b92525;
-    border: 0px;
 }
 
-#id-div-quadrant-2-complete:hover svg {
+.class-button-completeTodo-2 svg:hover {
     background-color: #335977;
-    border: 0px;
 }
 
-#id-div-quadrant-3-complete:hover svg {
+.class-button-completeTodo-3 svg:hover {
     background-color: #DE9B37;
-    border: 0px;
 }
 
-#id-div-quadrant-4-complete:hover svg {
+.class-button-completeTodo-4 svg:hover {
     background-color: #A7D078;
-    border: 0px;
+}
+/*done是挂载在class-button-completeTodo-*上的类*/
+.done svg .fill{
+    fill: #fff;
+}
+.class-button-completeTodo-1.done svg {
+    background-color: #b92525;
 }
 
-.class-ul-doneTodo {
-    position: relative;
-    padding: 60px 0 0 0;
+.class-button-completeTodo-2.done svg {
+    background-color: #335977;
 }
 
-.class-ul-doneTodo::before {
-    width: 150px;
-    height: 1px;
-    background-color: #d8e5e0;
-    position: absolute;
-    content: "";
-    top: 30px;
-    left: 50%;
-    margin: 0 0 0 -75px;
+.class-button-completeTodo-3.done svg {
+    background-color: #DE9B37;
 }
 
-#id-ul-doneTodo:empty:after {
-    content: "完成事项";
+.class-button-completeTodo-4.done svg {
+    background-color: #A7D078;
 }
 
-#id-ul-allTodo:empty:after {
-    content: "待做事项";
-    margin: 15px 0 0 0;
-}
-
-#id-ul-allTodo:after, #id-ul-doneTodo:after {
-    width: 100%;
-    display: block;
-    text-align: center;
-    font-size: 12px;
-    color: #aaa;
+.removeLi {
+    opacity: 0;
 }

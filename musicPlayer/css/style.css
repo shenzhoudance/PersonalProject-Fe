@@ -253,13 +253,14 @@ main {
     background-image: url(../img/cd.png);
     border-radius: 50%;
 }
+/*旋转动画*/
 #id-gan {
     position: absolute;
     z-index: 100;
     width: 100px;
     left: 57%;
     transform-origin:10px 15px;
-    transform: translateX(-50%) rotateZ(-30deg); ;
+    transform: translateX(-50%) rotateZ(-30deg);
     top:-19px;
     transition: all 0.5s;
 }

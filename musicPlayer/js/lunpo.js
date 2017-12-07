@@ -30,6 +30,7 @@ var position = [
 var playLunpoInterval = null
 var nLunpo = 0
 
+// 定时器每秒执行一次
 var playLunpo = function() {
 	clearInterval(playLunpoInterval)
 	playLunpoInterval = setInterval(function() {
@@ -37,10 +38,12 @@ var playLunpo = function() {
 	}, 1000)
 }
 
+
 var stopLunpo = function() {
 	clearInterval(playLunpoInterval)
 }
 
+// 改变图片位置，并返回新的数字
 var changePos = function(nLunpo) {
 	for(var i = 0; i < photos.length; i++) {
 		photos[i].style.transform = `translate3d(${position[nLunpo].x}px, ${position[nLunpo].y}px, ${position[nLunpo].z}px)`
@@ -68,6 +71,7 @@ var setPos = function(e) {
 	AddFromLunbo(index)
 }
 
+// 鼠标移入时，轮播停止，移出继续
 var initLunpo = function() {
 	container.addEventListener("mouseover",function() {
 		clearInterval(playLunpoInterval)
@@ -109,6 +113,7 @@ var AddFromLunbo = function(index) {
 	CutPlay(addMusic, n)
 }
 
+// 点击>或滑动图片
 var bindEventSlide = function() {
 	var selector = '.to-pic'
 	bindAll(selector, 'click', function(event){
