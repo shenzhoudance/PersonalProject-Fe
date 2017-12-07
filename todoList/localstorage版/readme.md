@@ -1,8 +1,8 @@
-### todoList事项计划表（localstorage版）
+# todoList事项计划表（localstorage版）
 
 ## 文件说明
-# css文件夹 存放样式文件
-# js文件夹
+### css文件夹 存放样式文件
+### js文件夹
 - utils.js 工具函数
 - index.js 操纵页面
 
